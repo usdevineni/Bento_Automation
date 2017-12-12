@@ -1,0 +1,715 @@
+<!DOCTYPE html> 
+<html> 
+	 <head> 
+		 <meta charset='UTF-8'> 
+		 <title>NBC News Application - ValidateAllLinks_TC4 Automation Execution Results</title> 
+
+		 <style type='text/css'> 
+			 body { 
+				 background-color: #000000; 
+				 font-family: Verdana, Geneva, sans-serif; 
+				 text-align: center; 
+			 } 
+
+			 small { 
+				 font-size: 0.7em; 
+			 } 
+
+			 table { 
+				 border: 1px solid #4D7C7B; 
+				 border-collapse: collapse; 
+				 border-spacing: 0px; 
+				 width: 95%; 
+				 margin-left: auto; 
+				 margin-right: auto; 
+			 } 
+
+			 tr.heading { 
+				 background-color: #4D7C7B; 
+				 color: #FFFF95; 
+				 font-size: 0.9em; 
+				 font-weight: bold; 
+			 } 
+
+			 tr.subheading { 
+				 background-color: #FFFF95; 
+				 color: #4D7C7B; 
+				 font-weight: bold; 
+				 font-size: 0.9em; 
+				 text-align: justify; 
+			 } 
+
+			 tr.section { 
+				 background-color: #89B6B5; 
+				 color: #333300; 
+				 cursor: pointer; 
+				 font-weight: bold; 
+				 font-size: 0.9em; 
+				 text-align: justify; 
+			 } 
+
+			 tr.subsection { 
+				 cursor: pointer; 
+			 } 
+
+			 tr.content { 
+				 background-color: #FAFAC5; 
+				 color: #000000; 
+				 font-size: 0.9em; 
+				 display: table-row; 
+			 } 
+
+			 td { 
+				 padding: 4px; 
+				 text-align: inherit\0/; 
+				 word-wrap: break-word; 
+				 max-width: 450px; 
+			 } 
+
+			 th { 
+				 padding: 4px; 
+				 text-align: inherit\0/; 
+				 word-break: break-all; 
+				 max-width: 450px; 
+			 } 
+
+			 td.justified { 
+				 text-align: justify; 
+			 } 
+
+			 td.pass { 
+				 font-weight: bold; 
+				 color: green; 
+			 } 
+
+			 td.fail { 
+				 font-weight: bold; 
+				 color: red; 
+			 } 
+
+			 td.done, td.screenshot { 
+				 font-weight: bold; 
+				 color: black; 
+			 } 
+
+			 td.debug { 
+				 font-weight: bold; 
+				 color: blue; 
+			 } 
+
+			 td.warning { 
+				 font-weight: bold; 
+				 color: orange; 
+			 } 
+		 </style> 
+
+		 <script> 
+			 function toggleMenu(objID) { 
+				 if (!document.getElementById) return; 
+				 var ob = document.getElementById(objID).style; 
+				 if(ob.display === 'none') { 
+					 try { 
+						 ob.display='table-row-group'; 
+					 } catch(ex) { 
+						 ob.display='block'; 
+					 } 
+				 } 
+				 else { 
+					 ob.display='none'; 
+				 } 
+			 } 
+			 function toggleSubMenu(objId) { 
+				 for(i=1; i<10000; i++) { 
+					 var ob = document.getElementById(objId.concat(i)); 
+					 if(ob === null) { 
+						 break; 
+					 } 
+					 if(ob.style.display === 'none') { 
+						 try { 
+							 ob.style.display='table-row'; 
+						 } catch(ex) { 
+							 ob.style.display='block'; 
+						 } 
+					 } 
+					 else { 
+						 ob.style.display='none'; 
+					 } 
+				 } 
+			 } 
+		 </script> 
+	 </head> 
+
+	 <body> 
+		 <table id='header'> 
+			 <thead> 
+				 <tr class='heading'> 
+					 <th colspan='4' style='font-family:Copperplate Gothic Bold; font-size:1.4em;'> 
+						 NBC News Application - ValidateAllLinks_TC4 Automation Execution Results 
+					 </th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Date&nbsp;&&nbsp;Time</th> 
+					 <th>&nbsp;:&nbsp;11-Dec-2017&nbsp;03:39:41&nbsp;AM</th> 
+					 <th>&nbsp;Iteration&nbsp;Mode</th> 
+					 <th>&nbsp;:&nbsp;RunAllIterations</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Start&nbsp;Iteration</th> 
+					 <th>&nbsp;:&nbsp;1</th> 
+					 <th>&nbsp;End&nbsp;Iteration</th> 
+					 <th>&nbsp;:&nbsp;1</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Browser</th> 
+					 <th>&nbsp;:&nbsp;Chrome</th> 
+					 <th>&nbsp;Executed&nbsp;on</th> 
+					 <th>&nbsp;:&nbsp;Local&nbsp;Machine</th> 
+				 </tr> 
+			 </thead> 
+		 </table> 
+
+		 <table id='main'> 
+			 <thead> 
+				 <tr class='heading'> 
+					 <th>Step No</th> 
+					 <th>Step Name</th> 
+					 <th>Description</th> 
+					 <th>Status</th> 
+					 <th>Step Time</th> 
+				 </tr> 
+			 </thead> 
+
+			 <tbody> 
+				 <tr class='section'> 
+					 <td colspan='5' onclick="toggleMenu('Iteration1')">+ Iteration: 1</td> 
+				 </tr> 
+			 </tbody> 
+			 <tbody id='Iteration1' style='display:table-row-group'> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1validateAllLinks')">&nbsp;+ validateAllLinks</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks1'> 
+					 <td>1</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.nbcuni.com/privacy is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:06 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks2'> 
+					 <td>2</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:07 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks3'> 
+					 <td>3</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.facebook.com/sharer/sharer.php?u=https://www.nbcnews.com/better is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:08 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks4'> 
+					 <td>4</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://twitter.com/intent/tweet?text=&via=NBCNewsBETTER&url=https://www.nbcnews.com/better&original_referer=https://www.nbcnews.com/better is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:08 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks5'> 
+					 <td>5</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.nbcnews.com/better/diet-fitness is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:09 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks6'> 
+					 <td>6</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.nbcnews.com/better/careers is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:09 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks7'> 
+					 <td>7</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.nbcnews.com/better/money is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:09 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks8'> 
+					 <td>8</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/wellness is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:12 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks9'> 
+					 <td>9</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/relationships is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:15 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks10'> 
+					 <td>10</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/under-20-11-gifts-thoughtful-givers-budget-ncna825556 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:16 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks11'> 
+					 <td>11</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/under-20-11-gifts-thoughtful-givers-budget-ncna825556 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:16 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks12'> 
+					 <td>12</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/how-intuitive-eating-helped-woman-love-her-body-get-healthy-ncna827756 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:17 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks13'> 
+					 <td>13</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/how-intuitive-eating-helped-woman-love-her-body-get-healthy-ncna827756 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:17 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks14'> 
+					 <td>14</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/try-meditation-chase-winter-blues-away-ncna824976 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:19 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks15'> 
+					 <td>15</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/try-meditation-chase-winter-blues-away-ncna824976 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:20 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks16'> 
+					 <td>16</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/why-older-women-will-rule-world-future-female-mit-expert-ncna826736 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:21 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks17'> 
+					 <td>17</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/why-older-women-will-rule-world-future-female-mit-expert-ncna826736 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:22 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks18'> 
+					 <td>18</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/6-solutions-your-winter-running-complaints-ncna824501 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:22 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks19'> 
+					 <td>19</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/6-solutions-your-winter-running-complaints-ncna824501 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:23 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks20'> 
+					 <td>20</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/15-gadgets-gifts-will-take-your-fitness-routine-next-level-ncna825381 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:23 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks21'> 
+					 <td>21</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/15-gadgets-gifts-will-take-your-fitness-routine-next-level-ncna825381 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:24 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks22'> 
+					 <td>22</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/6-holiday-shopping-scams-how-avoid-them-ncna826351 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:27 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks23'> 
+					 <td>23</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/6-holiday-shopping-scams-how-avoid-them-ncna826351 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:27 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks24'> 
+					 <td>24</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:28 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks25'> 
+					 <td>25</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:28 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks26'> 
+					 <td>26</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/behind-bars-james-beard-house-ncna827851 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:29 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks27'> 
+					 <td>27</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/behind-bars-james-beard-house-ncna827851 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:29 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks28'> 
+					 <td>28</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/pop-culture/mom-what-s-pager-explaining-obsolete-your-kids-yourself-ncna827876 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:30 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks29'> 
+					 <td>29</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/pop-culture/mom-what-s-pager-explaining-obsolete-your-kids-yourself-ncna827876 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:31 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks30'> 
+					 <td>30</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/video/we-tried-tom-brady-s-diet-1112696387535 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:32 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks31'> 
+					 <td>31</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/video/we-tried-tom-brady-s-diet-1112696387535 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:32 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks32'> 
+					 <td>32</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/introvert-s-guide-office-holiday-party-ncna826336 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:33 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks33'> 
+					 <td>33</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/introvert-s-guide-office-holiday-party-ncna826336 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:33 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks34'> 
+					 <td>34</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/6-easy-ways-add-cardio-your-strength-workout-ncna827366 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:34 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks35'> 
+					 <td>35</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/6-easy-ways-add-cardio-your-strength-workout-ncna827366 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:34 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks36'> 
+					 <td>36</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/video/holiday-stress-chill-out-with-these-three-apps-1111718979529 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:35 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks37'> 
+					 <td>37</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/video/holiday-stress-chill-out-with-these-three-apps-1111718979529 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:35 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks38'> 
+					 <td>38</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/12-gifts-healthier-happier-cats-dogs-their-owners-ncna820856 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:37 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks39'> 
+					 <td>39</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/12-gifts-healthier-happier-cats-dogs-their-owners-ncna820856 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:37 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks40'> 
+					 <td>40</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/better/7-surprising-foods-should-be-stored-fridge-n757481 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:38 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks41'> 
+					 <td>41</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/better/7-surprising-foods-should-be-stored-fridge-n757481 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:38 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks42'> 
+					 <td>42</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/mental-trick-help-you-deal-rude-people-holiday-season-ncna825666 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:39 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks43'> 
+					 <td>43</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/mental-trick-help-you-deal-rude-people-holiday-season-ncna825666 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:40 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks44'> 
+					 <td>44</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/video/2-minutes-with-nastia-liukin-olympic-gold-medalist-and-gymnast-1109805635981 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:41 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks45'> 
+					 <td>45</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/video/2-minutes-with-nastia-liukin-olympic-gold-medalist-and-gymnast-1109805635981 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:42 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks46'> 
+					 <td>46</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/pop-culture/what-mercury-retrograde-there-anything-it-ncna825726 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:42 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks47'> 
+					 <td>47</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/pop-culture/what-mercury-retrograde-there-anything-it-ncna825726 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:43 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks48'> 
+					 <td>48</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/why-we-stress-spend-during-holidays-how-stop-ncna824156 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:43 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks49'> 
+					 <td>49</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/why-we-stress-spend-during-holidays-how-stop-ncna824156 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:44 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks50'> 
+					 <td>50</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/why-conversational-narcissism-can-ruin-your-relationships-ncna825676 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:45 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks51'> 
+					 <td>51</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/health/why-conversational-narcissism-can-ruin-your-relationships-ncna825676 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:46 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks52'> 
+					 <td>52</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/big-sales-are-over-here-s-how-get-better-deals-ncna825641 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:47 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks53'> 
+					 <td>53</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/better/business/big-sales-are-over-here-s-how-get-better-deals-ncna825641 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:47 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks54'> 
+					 <td>54</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:47 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks55'> 
+					 <td>55</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/storyline/trumps-victory-1-year-later/data-republican-party-id-drops-after-trump-election-n828141 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:48 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks56'> 
+					 <td>56</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/leftfield is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:48 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks57'> 
+					 <td>57</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/leftfield/video/indian-capital-overtakes-beijing-as-most-polluted-city-1112510531814 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:50 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks58'> 
+					 <td>58</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/mach is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:50 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks59'> 
+					 <td>59</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/mach/science/new-discovery-could-change-way-we-look-alien-life-ncna827921 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:51 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks60'> 
+					 <td>60</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:51 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks61'> 
+					 <td>61</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/pages/about-nbc-news-digital is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:51 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks62'> 
+					 <td>62</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.msnbc.com/terms-of-service is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:52 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks63'> 
+					 <td>63</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/pages/contact-us is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:52 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks64'> 
+					 <td>64</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.nbcunicareers.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:52 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks65'> 
+					 <td>65</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcuniversal.com/privacy/full-privacy-policy is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:53 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks66'> 
+					 <td>66</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/pages/terms-of-service is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:53 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks67'> 
+					 <td>67</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/pages/sitemap is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:54 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks68'> 
+					 <td>68</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://info.evidon.com/pub_info/267?v=1 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:54 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks69'> 
+					 <td>69</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://nbcnews.com/ is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:54 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks70'> 
+					 <td>70</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://msnbc.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:55 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks71'> 
+					 <td>71</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.today.com/ is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 03:42:55 AM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1closeApp')">&nbsp;+ closeApp</td> 
+				 </tr> 
+			 </tbody> 
+		 </table> 
+
+		 <table id='footer'> 
+			 <colgroup> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+			 </colgroup> 
+
+			 <tfoot> 
+				 <tr class='heading'> 
+					 <th colspan='4'>Execution Duration: 3 minute(s), 23 seconds</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <td class='pass'>&nbsp;Steps passed</td> 
+					 <td class='pass'>&nbsp;: 71</td> 
+					 <td class='fail'>&nbsp;Steps failed</td> 
+					 <td class='fail'>&nbsp;: 0</td> 
+				 </tr> 
+			 </tfoot> 
+		 </table> 
+	 </body> 
+</html>

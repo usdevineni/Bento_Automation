@@ -1,0 +1,554 @@
+<!DOCTYPE html> 
+<html> 
+	 <head> 
+		 <meta charset='UTF-8'> 
+		 <title>NBC News Application - ValidateAllLinks_TC10 Automation Execution Results</title> 
+
+		 <style type='text/css'> 
+			 body { 
+				 background-color: #000000; 
+				 font-family: Verdana, Geneva, sans-serif; 
+				 text-align: center; 
+			 } 
+
+			 small { 
+				 font-size: 0.7em; 
+			 } 
+
+			 table { 
+				 border: 1px solid #4D7C7B; 
+				 border-collapse: collapse; 
+				 border-spacing: 0px; 
+				 width: 95%; 
+				 margin-left: auto; 
+				 margin-right: auto; 
+			 } 
+
+			 tr.heading { 
+				 background-color: #4D7C7B; 
+				 color: #FFFF95; 
+				 font-size: 0.9em; 
+				 font-weight: bold; 
+			 } 
+
+			 tr.subheading { 
+				 background-color: #FFFF95; 
+				 color: #4D7C7B; 
+				 font-weight: bold; 
+				 font-size: 0.9em; 
+				 text-align: justify; 
+			 } 
+
+			 tr.section { 
+				 background-color: #89B6B5; 
+				 color: #333300; 
+				 cursor: pointer; 
+				 font-weight: bold; 
+				 font-size: 0.9em; 
+				 text-align: justify; 
+			 } 
+
+			 tr.subsection { 
+				 cursor: pointer; 
+			 } 
+
+			 tr.content { 
+				 background-color: #FAFAC5; 
+				 color: #000000; 
+				 font-size: 0.9em; 
+				 display: table-row; 
+			 } 
+
+			 td { 
+				 padding: 4px; 
+				 text-align: inherit\0/; 
+				 word-wrap: break-word; 
+				 max-width: 450px; 
+			 } 
+
+			 th { 
+				 padding: 4px; 
+				 text-align: inherit\0/; 
+				 word-break: break-all; 
+				 max-width: 450px; 
+			 } 
+
+			 td.justified { 
+				 text-align: justify; 
+			 } 
+
+			 td.pass { 
+				 font-weight: bold; 
+				 color: green; 
+			 } 
+
+			 td.fail { 
+				 font-weight: bold; 
+				 color: red; 
+			 } 
+
+			 td.done, td.screenshot { 
+				 font-weight: bold; 
+				 color: black; 
+			 } 
+
+			 td.debug { 
+				 font-weight: bold; 
+				 color: blue; 
+			 } 
+
+			 td.warning { 
+				 font-weight: bold; 
+				 color: orange; 
+			 } 
+		 </style> 
+
+		 <script> 
+			 function toggleMenu(objID) { 
+				 if (!document.getElementById) return; 
+				 var ob = document.getElementById(objID).style; 
+				 if(ob.display === 'none') { 
+					 try { 
+						 ob.display='table-row-group'; 
+					 } catch(ex) { 
+						 ob.display='block'; 
+					 } 
+				 } 
+				 else { 
+					 ob.display='none'; 
+				 } 
+			 } 
+			 function toggleSubMenu(objId) { 
+				 for(i=1; i<10000; i++) { 
+					 var ob = document.getElementById(objId.concat(i)); 
+					 if(ob === null) { 
+						 break; 
+					 } 
+					 if(ob.style.display === 'none') { 
+						 try { 
+							 ob.style.display='table-row'; 
+						 } catch(ex) { 
+							 ob.style.display='block'; 
+						 } 
+					 } 
+					 else { 
+						 ob.style.display='none'; 
+					 } 
+				 } 
+			 } 
+		 </script> 
+	 </head> 
+
+	 <body> 
+		 <table id='header'> 
+			 <thead> 
+				 <tr class='heading'> 
+					 <th colspan='4' style='font-family:Copperplate Gothic Bold; font-size:1.4em;'> 
+						 NBC News Application - ValidateAllLinks_TC10 Automation Execution Results 
+					 </th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Date&nbsp;&&nbsp;Time</th> 
+					 <th>&nbsp;:&nbsp;10-Dec-2017&nbsp;11:50:22&nbsp;PM</th> 
+					 <th>&nbsp;Iteration&nbsp;Mode</th> 
+					 <th>&nbsp;:&nbsp;RunAllIterations</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Start&nbsp;Iteration</th> 
+					 <th>&nbsp;:&nbsp;1</th> 
+					 <th>&nbsp;End&nbsp;Iteration</th> 
+					 <th>&nbsp;:&nbsp;1</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Browser</th> 
+					 <th>&nbsp;:&nbsp;Chrome</th> 
+					 <th>&nbsp;Executed&nbsp;on</th> 
+					 <th>&nbsp;:&nbsp;Local&nbsp;Machine</th> 
+				 </tr> 
+			 </thead> 
+		 </table> 
+
+		 <table id='main'> 
+			 <thead> 
+				 <tr class='heading'> 
+					 <th>Step No</th> 
+					 <th>Step Name</th> 
+					 <th>Description</th> 
+					 <th>Status</th> 
+					 <th>Step Time</th> 
+				 </tr> 
+			 </thead> 
+
+			 <tbody> 
+				 <tr class='section'> 
+					 <td colspan='5' onclick="toggleMenu('Iteration1')">+ Iteration: 1</td> 
+				 </tr> 
+			 </tbody> 
+			 <tbody id='Iteration1' style='display:table-row-group'> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1validateAllLinks')">&nbsp;+ validateAllLinks</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks1'> 
+					 <td>1</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.nbcuni.com/privacy is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:29 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks2'> 
+					 <td>2</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:29 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks3'> 
+					 <td>3</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.facebook.com/sharer/sharer.php?u=https://www.nbcnews.com/feature/nbc-out/kevin-spacey-rebuked-coming-out-amid-sexual-abuse-allegations-n815571 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:29 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks4'> 
+					 <td>4</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://twitter.com/intent/tweet?text=Kevin%20Spacey%20criticized%20for%20coming%20out%20during%20sexual%20abuse%20allegation%20apology&via=NBCNews&url=https://www.nbcnews.com/feature/nbc-out/kevin-spacey-rebuked-coming-out-amid-sexual-abuse-allegations-n815571&original_referer=https://www.nbcnews.com/feature/nbc-out/kevin-spacey-rebuked-coming-out-amid-sexual-abuse-allegations-n815571 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:30 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks5'> 
+					 <td>5</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.buzzfeed.com/adambvary/anthony-rapp-kevin-spacey-made-sexual-advance-when-i-was-14?utm_term=.qvKP94e5nl#.pe6wZbgPnz is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:30 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks6'> 
+					 <td>6</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/nightly-news/video/kevin-spacey-accused-of-sexual-harassment-1084826691909 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:31 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks7'> 
+					 <td>7</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/nightly-news/video/kevin-spacey-accused-of-sexual-harassment-1084826691909 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:31 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks8'> 
+					 <td>8</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.facebook.com/sharer/sharer.php?u=undefined is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:32 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks9'> 
+					 <td>9</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://twitter.com/intent/tweet?text=Kevin%20Spacey%20Accused%20of%20Sexual%20Harassment&via=NBCNews&url=undefined&original_referer=undefined is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:32 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks10'> 
+					 <td>10</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.hollywoodreporter.com/live-feed/house-cards-ending-sixth-final-season-at-netflix-1018551 is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:32 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks11'> 
+					 <td>11</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out/anthony-rapp-wilson-cruz-star-trek-discovery-relationship-n809436 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:34 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks12'> 
+					 <td>12</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.splcenter.org/fighting-hate/intelligence-report/2011/10-anti-gay-myths-debunked is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:35 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks13'> 
+					 <td>13</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out/gay-actors-talk-sexual-harassment-it-definitely-happens-n813231 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:36 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks14'> 
+					 <td>14</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://popup.taboola.com/en/?template=colorbox&utm_source=nbcnews&utm_medium=referral&utm_content=thumbnails-o:Below%20Article%20Thumbnails%20-%20Bento%20Test%201: is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:36 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks15'> 
+					 <td>15</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://popup.taboola.com/en/?template=colorbox&utm_source=nbcnews&utm_medium=referral&utm_content=thumbnails-o:Below%20Article%20Thumbnails%20-%20Bento%20Test%201: is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:36 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks16'> 
+					 <td>16</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://popup.taboola.com/en/?template=colorbox&utm_source=nbcnews&utm_medium=referral&utm_content=thumbnails-o:Below%20Article%20Thumbnails%20-%20Bento%20Test%201: is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:37 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks17'> 
+					 <td>17</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://popup.taboola.com/en/?template=colorbox&utm_source=nbcnews&utm_medium=referral&utm_content=thumbnails-o:Below%20Article%20Thumbnails%20-%20Bento%20Test%201: is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:37 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks18'> 
+					 <td>18</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://alive-mag.com/daytwo/?utm_source=taboola&utm_medium=daytwo&utm_campaign=dt_us_alive_desk_new&utm_term=nbcnews&utm_content=Why+Health+Food+To+One+Person+May+Be+Junk+Food+To+Another is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:38 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks19'> 
+					 <td>19</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://alive-mag.com/daytwo/?utm_source=taboola&utm_medium=daytwo&utm_campaign=dt_us_alive_desk_new&utm_term=nbcnews&utm_content=Why+Health+Food+To+One+Person+May+Be+Junk+Food+To+Another is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:39 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks20'> 
+					 <td>20</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://mmptrack.com/click.track?CID=404177&AFID=362416&ADID=2035029&SID=wsmsn-nbcnews is up and running. Response code - 302</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:39 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks21'> 
+					 <td>21</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://mmptrack.com/click.track?CID=404177&AFID=362416&ADID=2035029&SID=wsmsn-nbcnews is up and running. Response code - 302</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:39 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks22'> 
+					 <td>22</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://collicts-unityprus.com/2e9a6ba2-02b7-45fc-bc13-b8067097cc19?site=nbcnews&clickid=CjBiZjdjMGU0Yi0wNjY5LTQyYzItYTViZC0wOTJmOGJmYzRhNmYtdHVjdDEyN2IwMzESDGlucXVpc2l0ci1zYw&title=%231+Investment+for+2018%3A+%22This+Technology+Will+Be+Bigger+Than+the+Internet%22&thumbnail=http%3A%2F%2Fcdn.taboola.com%2Flibtrc%2Fstatic%2Fthumbnails%2F2778e3607ff6395892711ac0acb9e5f8.jpg&ad={ad} is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:40 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks23'> 
+					 <td>23</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://collicts-unityprus.com/2e9a6ba2-02b7-45fc-bc13-b8067097cc19?site=nbcnews&clickid=CjBiZjdjMGU0Yi0wNjY5LTQyYzItYTViZC0wOTJmOGJmYzRhNmYtdHVjdDEyN2IwMzESDGlucXVpc2l0ci1zYw&title=%231+Investment+for+2018%3A+%22This+Technology+Will+Be+Bigger+Than+the+Internet%22&thumbnail=http%3A%2F%2Fcdn.taboola.com%2Flibtrc%2Fstatic%2Fthumbnails%2F2778e3607ff6395892711ac0acb9e5f8.jpg&ad={ad} is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:40 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks24'> 
+					 <td>24</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://beverlyhillsmd.com/cmd.php?ad=873582&utm_source=taboola&utm_medium=referral is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:41 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks25'> 
+					 <td>25</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://beverlyhillsmd.com/cmd.php?ad=873582&utm_source=taboola&utm_medium=referral is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:42 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks26'> 
+					 <td>26</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://onlinenursing.regiscollege.edu/master-health-administration/5-career-specialties-for-health-administrators/?Access_Code=RC-MSHA-TABOOLA&utm_medium=internet&kwdmt=5careerspecialties&utm_source=taboola.com&utm_campaign=RC-MSHA-TABOOLA is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:42 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks27'> 
+					 <td>27</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://onlinenursing.regiscollege.edu/master-health-administration/5-career-specialties-for-health-administrators/?Access_Code=RC-MSHA-TABOOLA&utm_medium=internet&kwdmt=5careerspecialties&utm_source=taboola.com&utm_campaign=RC-MSHA-TABOOLA is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:43 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks28'> 
+					 <td>28</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://ad.doubleclick.net/ddm/clk/409998848;149272995;q is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:44 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks29'> 
+					 <td>29</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://ad.doubleclick.net/ddm/clk/409998848;149272995;q is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:44 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks30'> 
+					 <td>30</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:46 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks31'> 
+					 <td>31</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out/former-houston-mayor-annise-parker-lead-lgbtq-victory-fund-n827746 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:46 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks32'> 
+					 <td>32</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out/former-houston-mayor-annise-parker-lead-lgbtq-victory-fund-n827746 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:46 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks33'> 
+					 <td>33</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out/rep-maxine-waters-lgbtq-community-i-will-be-you-fights-n827376 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:47 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks34'> 
+					 <td>34</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out/rep-maxine-waters-lgbtq-community-i-will-be-you-fights-n827376 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:47 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks35'> 
+					 <td>35</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out/australian-parliament-approves-same-sex-marriage-n827281 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:48 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks36'> 
+					 <td>36</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/feature/nbc-out/australian-parliament-approves-same-sex-marriage-n827281 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:48 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks37'> 
+					 <td>37</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:48 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks38'> 
+					 <td>38</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/pages/about-nbc-news-digital is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:49 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks39'> 
+					 <td>39</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.msnbc.com/terms-of-service is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:49 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks40'> 
+					 <td>40</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/pages/contact-us is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:49 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks41'> 
+					 <td>41</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.nbcunicareers.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:49 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks42'> 
+					 <td>42</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcuniversal.com/privacy/full-privacy-policy is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:50 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks43'> 
+					 <td>43</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/pages/terms-of-service is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:50 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks44'> 
+					 <td>44</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.nbcnews.com/pages/sitemap is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:50 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks45'> 
+					 <td>45</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://info.evidon.com/pub_info/267?v=1 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:51 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks46'> 
+					 <td>46</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://nbcnews.com/ is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:51 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks47'> 
+					 <td>47</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://msnbc.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:51 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks48'> 
+					 <td>48</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.today.com/ is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Dec-2017 11:50:51 PM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1closeApp')">&nbsp;+ closeApp</td> 
+				 </tr> 
+			 </tbody> 
+		 </table> 
+
+		 <table id='footer'> 
+			 <colgroup> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+			 </colgroup> 
+
+			 <tfoot> 
+				 <tr class='heading'> 
+					 <th colspan='4'>Execution Duration: 0 minute(s), 34 seconds</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <td class='pass'>&nbsp;Steps passed</td> 
+					 <td class='pass'>&nbsp;: 48</td> 
+					 <td class='fail'>&nbsp;Steps failed</td> 
+					 <td class='fail'>&nbsp;: 0</td> 
+				 </tr> 
+			 </tfoot> 
+		 </table> 
+	 </body> 
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html> 
+<html> 
+	 <head> 
+		 <meta charset='UTF-8'> 
+		 <title>NBC News Application - ValidateAllLinks_TC11 Automation Execution Results</title> 
+
+		 <style type='text/css'> 
+			 body { 
+				 background-color: #000000; 
+				 font-family: Verdana, Geneva, sans-serif; 
+				 text-align: center; 
+			 } 
+
+			 small { 
+				 font-size: 0.7em; 
+			 } 
+
+			 table { 
+				 border: 1px solid #4D7C7B; 
+				 border-collapse: collapse; 
+				 border-spacing: 0px; 
+				 width: 95%; 
+				 margin-left: auto; 
+				 margin-right: auto; 
+			 } 
+
+			 tr.heading { 
+				 background-color: #4D7C7B; 
+				 color: #FFFF95; 
+				 font-size: 0.9em; 
+				 font-weight: bold; 
+			 } 
+
+			 tr.subheading { 
+				 background-color: #FFFF95; 
+				 color: #4D7C7B; 
+				 font-weight: bold; 
+				 font-size: 0.9em; 
+				 text-align: justify; 
+			 } 
+
+			 tr.section { 
+				 background-color: #89B6B5; 
+				 color: #333300; 
+				 cursor: pointer; 
+				 font-weight: bold; 
+				 font-size: 0.9em; 
+				 text-align: justify; 
+			 } 
+
+			 tr.subsection { 
+				 cursor: pointer; 
+			 } 
+
+			 tr.content { 
+				 background-color: #FAFAC5; 
+				 color: #000000; 
+				 font-size: 0.9em; 
+				 display: table-row; 
+			 } 
+
+			 td { 
+				 padding: 4px; 
+				 text-align: inherit\0/; 
+				 word-wrap: break-word; 
+				 max-width: 450px; 
+			 } 
+
+			 th { 
+				 padding: 4px; 
+				 text-align: inherit\0/; 
+				 word-break: break-all; 
+				 max-width: 450px; 
+			 } 
+
+			 td.justified { 
+				 text-align: justify; 
+			 } 
+
+			 td.pass { 
+				 font-weight: bold; 
+				 color: green; 
+			 } 
+
+			 td.fail { 
+				 font-weight: bold; 
+				 color: red; 
+			 } 
+
+			 td.done, td.screenshot { 
+				 font-weight: bold; 
+				 color: black; 
+			 } 
+
+			 td.debug { 
+				 font-weight: bold; 
+				 color: blue; 
+			 } 
+
+			 td.warning { 
+				 font-weight: bold; 
+				 color: orange; 
+			 } 
+		 </style> 
+
+		 <script> 
+			 function toggleMenu(objID) { 
+				 if (!document.getElementById) return; 
+				 var ob = document.getElementById(objID).style; 
+				 if(ob.display === 'none') { 
+					 try { 
+						 ob.display='table-row-group'; 
+					 } catch(ex) { 
+						 ob.display='block'; 
+					 } 
+				 } 
+				 else { 
+					 ob.display='none'; 
+				 } 
+			 } 
+			 function toggleSubMenu(objId) { 
+				 for(i=1; i<10000; i++) { 
+					 var ob = document.getElementById(objId.concat(i)); 
+					 if(ob === null) { 
+						 break; 
+					 } 
+					 if(ob.style.display === 'none') { 
+						 try { 
+							 ob.style.display='table-row'; 
+						 } catch(ex) { 
+							 ob.style.display='block'; 
+						 } 
+					 } 
+					 else { 
+						 ob.style.display='none'; 
+					 } 
+				 } 
+			 } 
+		 </script> 
+	 </head> 
+
+	 <body> 
+		 <table id='header'> 
+			 <thead> 
+				 <tr class='heading'> 
+					 <th colspan='4' style='font-family:Copperplate Gothic Bold; font-size:1.4em;'> 
+						 NBC News Application - ValidateAllLinks_TC11 Automation Execution Results 
+					 </th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Date&nbsp;&&nbsp;Time</th> 
+					 <th>&nbsp;:&nbsp;11-Dec-2017&nbsp;04:00:33&nbsp;AM</th> 
+					 <th>&nbsp;Iteration&nbsp;Mode</th> 
+					 <th>&nbsp;:&nbsp;RunAllIterations</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Start&nbsp;Iteration</th> 
+					 <th>&nbsp;:&nbsp;1</th> 
+					 <th>&nbsp;End&nbsp;Iteration</th> 
+					 <th>&nbsp;:&nbsp;1</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Browser</th> 
+					 <th>&nbsp;:&nbsp;Chrome</th> 
+					 <th>&nbsp;Executed&nbsp;on</th> 
+					 <th>&nbsp;:&nbsp;Local&nbsp;Machine</th> 
+				 </tr> 
+			 </thead> 
+		 </table> 
+
+		 <table id='main'> 
+			 <thead> 
+				 <tr class='heading'> 
+					 <th>Step No</th> 
+					 <th>Step Name</th> 
+					 <th>Description</th> 
+					 <th>Status</th> 
+					 <th>Step Time</th> 
+				 </tr> 
+			 </thead> 
+
+			 <tbody> 
+				 <tr class='section'> 
+					 <td colspan='5' onclick="toggleMenu('Iteration1')">+ Iteration: 1</td> 
+				 </tr> 
+			 </tbody> 
+			 <tbody id='Iteration1' style='display:table-row-group'> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1validateAllLinks')">&nbsp;+ validateAllLinks</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks1'> 
+					 <td>1</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.nbcuni.com/privacy is up and running. Response code - 301</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:40 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks2'> 
+					 <td>2</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.today.com/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:41 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks3'> 
+					 <td>3</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.facebook.com/sharer/sharer.php?u=https://www.today.com/pets/what-pit-bull-it-s-not-actually-dog-breed-t118066 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:41 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks4'> 
+					 <td>4</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://twitter.com/intent/tweet?text=What%20is%20a%20pit%20bull?%20(Hint:%20It%E2%80%99s%20not%20actually%20a%20breed)&via=TODAYshow&url=https://www.today.com/pets/what-pit-bull-it-s-not-actually-dog-breed-t118066&original_referer=https://www.today.com/pets/what-pit-bull-it-s-not-actually-dog-breed-t118066 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:42 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks5'> 
+					 <td>5</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.facebook.com/agoldphotos/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:43 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks6'> 
+					 <td>6</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://agoldphoto.com/pit-bull-picture-project/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:43 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks7'> 
+					 <td>7</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.today.com/pets/dog-rescued-euthanasia-has-love-affair-his-blanket-t118011 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:45 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks8'> 
+					 <td>8</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.today.com/pets is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:47 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks9'> 
+					 <td>9</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.today.com/video/rescued-pit-bulls-are-the-star-of-this-chicago-circus-1071722563590 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:47 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks10'> 
+					 <td>10</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.today.com/video/rescued-pit-bulls-are-the-star-of-this-chicago-circus-1071722563590 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:47 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks11'> 
+					 <td>11</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.facebook.com/sharer/sharer.php?u=undefined is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:48 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks12'> 
+					 <td>12</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://twitter.com/intent/tweet?text=Rescued%20pit%20bulls%20are%20the%20star%20of%20this%20Chicago%20circus&via=TODAYshow&url=undefined&original_referer=undefined is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:48 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks13'> 
+					 <td>13</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.amazon.com/dp/B013ZNK5HG/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1 is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:49 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks14'> 
+					 <td>14</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.realpitbull.com/standards.html is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:49 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks15'> 
+					 <td>15</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.vetmed.ufl.edu/2016/02/17/dna-studies-reveal-that-shelter-workers-often-mislabel-dogs-as-pit-bulls/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:50 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks16'> 
+					 <td>16</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://sheltermedicine.vetmed.ufl.edu/library/research-studies/current-studies/dog-breeds/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:51 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks17'> 
+					 <td>17</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://pinupsforpitbulls.org/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:54 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks18'> 
+					 <td>18</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.amazon.com/Pit-Bull-Life-Lovers-Companion/dp/1581573626/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=&dpID=51N1eOf6shL&preST=_SX258_BO1,204,203,200_QL70_&dpSrc=detail is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:54 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks19'> 
+					 <td>19</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.thedodo.com/close-to-home/delaware-pit-bull-law-bsl is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:55 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks20'> 
+					 <td>20</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.slate.com/articles/health_and_science/science/2016/09/montreal_wants_to_ban_pit_bulls_but_has_no_evidence_it_will_help.html is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:55 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks21'> 
+					 <td>21</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.animalfarmfoundation.org/files/Organizations_That_Do_Not_Endorse_BDL.pdf is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:55 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks22'> 
+					 <td>22</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://fox8.com/2017/09/06/pets-fate-decided-lakewood-woman-ordered-to-remove-pit-bull-from-city/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:56 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks23'> 
+					 <td>23</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://fox8.com/2017/09/18/live-video-protest-against-lakewood-pit-bull-ruling/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:56 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks24'> 
+					 <td>24</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.facebook.com/MyPitBullisFamily/ is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:58 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks25'> 
+					 <td>25</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.aspcapro.org/blog/2017/05/19/rising-pit is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:58 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks26'> 
+					 <td>26</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://www.slate.com/articles/technology/future_tense/2017/06/breed_labels_don_t_tell_you_much_when_you_re_adopting_a_dog.html is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:00:59 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks27'> 
+					 <td>27</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://popup.taboola.com/en/?template=colorbox&utm_source=nbc-today&utm_medium=referral&utm_content=thumbnails-h:Below%20Article%20Thumbnails%20-%20Bento%20Test%201: is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:01 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks28'> 
+					 <td>28</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://popup.taboola.com/en/?template=colorbox&utm_source=nbc-today&utm_medium=referral&utm_content=thumbnails-h:Below%20Article%20Thumbnails%20-%20Bento%20Test%201: is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:02 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks29'> 
+					 <td>29</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://popup.taboola.com/en/?template=colorbox&utm_source=nbc-today&utm_medium=referral&utm_content=thumbnails-h:Below%20Article%20Thumbnails%20-%20Bento%20Test%201: is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:02 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks30'> 
+					 <td>30</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://popup.taboola.com/en/?template=colorbox&utm_source=nbc-today&utm_medium=referral&utm_content=thumbnails-h:Below%20Article%20Thumbnails%20-%20Bento%20Test%201: is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:02 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks31'> 
+					 <td>31</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://ad.doubleclick.net/ddm/clk/410188780;210378239;h is up and running. Response code - 302</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:03 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks32'> 
+					 <td>32</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://ad.doubleclick.net/ddm/clk/410188780;210378239;h is up and running. Response code - 302</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:03 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks33'> 
+					 <td>33</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://2esxnqqi.eternallifestyle.com/uncategorized/cast-big-bang-theory-real-life/?utm_campaign=SAFE%20MSN%20Big%20Bang%20Bernadette%20LR%20-%20Desktop%20USA&utm_source=taboola&utm_medium=nbc-today&utm_term=What+Bernadette+From+%27The+Big+Bang+Theory%27+Looks+Like+In+Real+Life+Is+Not+What+We+Were+Expecting&utm_content=https%3A%2F%2Fprod-cm-minder-uploads.s3.amazonaws.com%2Ffd6118f0-2ebf-4083-a454-efcdd5eedee9.png is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:04 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks34'> 
+					 <td>34</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link http://2esxnqqi.eternallifestyle.com/uncategorized/cast-big-bang-theory-real-life/?utm_campaign=SAFE%20MSN%20Big%20Bang%20Bernadette%20LR%20-%20Desktop%20USA&utm_source=taboola&utm_medium=nbc-today&utm_term=What+Bernadette+From+%27The+Big+Bang+Theory%27+Looks+Like+In+Real+Life+Is+Not+What+We+Were+Expecting&utm_content=https%3A%2F%2Fprod-cm-minder-uploads.s3.amazonaws.com%2Ffd6118f0-2ebf-4083-a454-efcdd5eedee9.png is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:05 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks35'> 
+					 <td>35</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.joinhoney.com/r/TB_US_Broad_None_18-65_All_Amazon_AmazonCreative_NA_InlineAmazon2?url=https%3A%2F%2Fwww.joinhoney.com%2Fg%2Farticle%2Foutsmart-amazon is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:06 AM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1validateAllLinks36'> 
+					 <td>36</td> 
+					 <td class='justified'>Response code for Section - Validate all links from a given URL</td> 
+					 <td class='justified'>The link https://www.joinhoney.com/r/TB_US_Broad_None_18-65_All_Amazon_AmazonCreative_NA_InlineAmazon2?url=https%3A%2F%2Fwww.joinhoney.com%2Fg%2Farticle%2Foutsmart-amazon is up and running. Response code - 200</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>11-Dec-2017 04:01:06 AM</small></td> 
+				 </tr> 
